@@ -1,0 +1,14 @@
+{% load cache %}
+{% cache 60 cats %}
+{% for c in cats %}
+{% if c.news_set.count > 0 %}
+
+	{% if c.pk == cat_selected %}
+		<li class="selected">{{c.name}}</li>
+	{% else %}
+		<li><a href="{{ c.get_absolute_url }}">{{c.name}}</a></li>
+	{% endif %}
+
+{% endif %}
+{% endfor %}
+{% endcache %}
