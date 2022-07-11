@@ -23,5 +23,14 @@ example
 >DEBUG=True
 > 
 >ALLOWED_HOSTS=127.0.0.1
-5. Run python manage.py makemigrations
-6. Run python manage.py migrate
+5. Run next operations in project terminal:
+>cd pobalakaemo
+> 
+>python manage.py makemigrations
+> 
+>python manage.py migrate
+> 
+> python manage.py runserver
+6. Create superuser 
+>python manage.py createsuperuser
+7. 127.0.0.1:8000/odmen to open adminpanel.
